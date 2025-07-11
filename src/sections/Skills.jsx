@@ -77,7 +77,9 @@ function Product() {
             {products.map((product, idx) => (
               <SwiperSlide key={idx}>
                 <div className="productCard p-4 rounded-4 text-center h-100 d-flex flex-column align-items-center justify-content-between" style={{background:'#f7f8fa', boxShadow:'0 2px 12px rgba(60,60,60,0.07)'}}>
-                  <img src={product.img} alt={product.title} className="mb-3 rounded-3 animateImg" style={{width:'100%',maxWidth:'100%',objectFit:'cover'}} />
+                  <div className="product-img-wrapper">
+                    <img src={product.img} alt={product.title} className="animateImg" style={{width:'100%',maxWidth:'100%',objectFit:'cover'}} />
+                  </div>
                   <h5 className="text-black fw-bold mb-2">{product.title}</h5>
                   <p className="text-muted mb-0" style={{fontSize:'1em'}}>{product.desc}</p>
                   <button className="qtec-btn">Add Product</button>

@@ -325,3 +325,8 @@ h1, h2, h3, h4, h5, h6, .qtec-h1, .qtec-h2, .qtec-h3, .qtec-h4, .qtec-h5, .qtec-
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
   line-height: 1.5;
 }
+.product-img-wrapper {
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}

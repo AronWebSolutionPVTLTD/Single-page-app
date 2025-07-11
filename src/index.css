@@ -1,0 +1,27 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Google Fonts setup */
+body {
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6,
+.qtec-h1, .qtec-h2, .qtec-h3, .qtec-h4, .qtec-h5, .qtec-h6 {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.navbar-logo {
+  height: 48px;   /* Adjust as needed, e.g., 40px, 48px, 56px */
+  width: auto;    /* Maintains aspect ratio */
+  display: block; /* Removes extra space below image */
+}

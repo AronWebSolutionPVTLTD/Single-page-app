@@ -168,6 +168,26 @@
     padding: 20px;
   }
   
+  /* About section mobile optimizations */
+  .qtec-about .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .qtec-about .row {
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+  
+  .qtec-about .col-lg-6,
+  .qtec-about .col-md-12,
+  .qtec-about .col-lg-4,
+  .qtec-about .col-md-6,
+  .qtec-about .col-sm-12 {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  
   /* Footer responsive styles */
   .copyright {
     font-size: 13px;

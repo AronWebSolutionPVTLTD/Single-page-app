@@ -86,12 +86,13 @@ h6 {
 }
 
 .qtec-tag {
-  font-size: 1em;
+  font-size: 2em;
   font-weight: 600;
   color: var(--text-color-dark);
   text-transform: uppercase;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 5px;
 }
 .qtec-tag img {

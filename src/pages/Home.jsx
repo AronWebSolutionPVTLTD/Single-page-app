@@ -136,10 +136,10 @@ function Home() {
           <Navbar />
           <SideNav />
           <Hero />
-       
-          {/* <Goals /> */}
-          <Skills />
+       {/* <Goals /> */}
           <About />
+          <Skills />
+          
           {/* <Portfolio /> */}
           {/* <Pricing /> */}
           {/* <Blog /> */}

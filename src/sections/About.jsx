@@ -1,85 +1,116 @@
+import { useState } from 'react'
+
 function About() {
+  const [activeTab, setActiveTab] = useState('vision')
+
+  const tabs = [
+    { id: 'vision', label: 'Our Vision', active: activeTab === 'vision' },
+    { id: 'about', label: 'About Us', active: activeTab === 'about' },
+    { id: 'founders', label: 'Founders', active: activeTab === 'founders' }
+  ]
+
+  const tabContent = {
+    vision: (
+      <div className="tab-content">
+        <p className="qtec-desc text-anim mb-4">
+          Obelixis is a trusted, design-led computer brand for creators, gamers, and professionals who expect more from their machines.
+        </p>
+        <p className="qtec-desc text-anim mb-4">
+          We believe performance should be powerful, beautiful, and effortless. Whether you're editing 4K video, winning online matches, or choosing a system that makes a statement, it should feel seamless. Our machines are not just spec sheets. They are engineered with precision, personality, and pride. We combine cutting-edge components with bold identity and a design that puts people first. The result is a PC you don't just use — you connect with. We care more about what's inside the system than how many lights it has. LEDs don't improve performance… components do.
+        </p>
+      </div>
+    ),
+    about: (
+      <div className="tab-content">
+        <p className="qtec-desc text-anim mb-4">
+          Reece and Jamie are an ambitious duo based in the UK, made up of tech lovers, designers, and creators. After spending years in the industry, we saw the same problems everywhere: overpriced machines, forgettable branding, unclear specifications, and uninspired design. So, we decided to create something better.
+        </p>
+        <p className="qtec-desc text-anim mb-4">
+          Our systems are curated, not cluttered. Each product line is built with intention — from reliable home PCs for professionals to showpiece rigs made to impress.
+        </p>
+        <p className="qtec-desc text-anim">
+          We aim to bring clarity, performance, and creative energy to your workspace. Our goal is to help the next generation of gamers, creators, and innovators find the perfect machine to match their vision.
+        </p>
+      </div>
+    ),
+    founders: (
+      <div className="tab-content">
+        <p className="qtec-desc text-anim">
+          Obelixis is led by Jamie and Reece, two lifelong friends with over 20 years of experience building computers together. Jamie is a software developer and solution architect in the finance sector, working with some of the most demanding companies in the world. He understands exactly what is required to run complex systems with ease. Reece is a compliance expert with a keen eye for detail. Quality control is second nature to both, and every system they build reflects that shared mindset. Every Obelixis machine is carefully constructed and rigorously tested to ensure it performs at its absolute best.
+        </p>
+      </div>
+    )
+  }
+
   return (
     <section className="qtec-about qtec-sectionMargin">
       <div className="container">
-        <div className="row align-items-center">
-          <div className="col-md-6 pe-4 position-relative overflow-hidden">
-            <img
-              src="/images/aboutSide.jpg"
-              alt="Side"
-              className="animateImg rounded-4 w-100"
-            />
-            <div className="rounded-4 qtecMask"></div>
-          </div>
-          <div className="col-md-6 ps-4">
-            <div className="qtec-tag">
-              <img src="/images/tagIconDark.png" alt="Tag" />
-              Welcome Creative Agency
+        {/* About Us - Image and Tabs Side by Side */}
+        <div className="row align-items-stretch mb-5 g-4">
+          <div className="col-lg-6 col-md-12 position-relative overflow-hidden d-flex align-items-stretch">
+            <div className="about-image-wrapper w-100 h-100">
+              <img
+                src="/images/aboutSide.jpg"
+                alt="About Obelixis"
+                className="animateImg rounded-4 w-100 h-100 object-fit-cover"
+                style={{ minHeight: '320px', objectFit: 'cover' }}
+              />
+              <div className="rounded-4 qtecMask"></div>
             </div>
-            <h3 className="text-anim qtec-h3 my-3 textDark">
-              Empowering Your Business with our Solutions
-            </h3>
-            <p className="qtec-desc my-4">
-              We are web designers, developers, project managers, And digital
-              marketing professionals dedicated to Creative and solutions using
-              the latest trend.
-            </p>
-            <div className="row align-items-center">
-              <div className="w-auto">
-                <button className="mt-0 qtec-btn"><span>Competitive</span></button>
+          </div>
+          <div className="col-lg-6 col-md-12 d-flex flex-column justify-content-center">
+            <div className="qtec-tag mb-3">
+              About us
+            </div>
+            {/* Tab Navigation */}
+            <div className="tab-navigation mb-4">
+              <div className="row g-2">
+                {tabs.map((tab) => (
+                  <div key={tab.id} className="col-12 col-sm-4">
+                    <button
+                      className={`tab-button ${tab.active ? 'active' : ''}`}
+                      onClick={() => setActiveTab(tab.id)}
+                    >
+                      {tab.label}
+                    </button>
+                  </div>
+                ))}
               </div>
-              <div className="w-auto">
-                <a href="#" className="qtec-email">
-                  <i className="fa-solid fa-square-phone"></i>Hello@agency.com
-                </a>
-              </div>
+            </div>
+            {/* Tab Content */}
+            <div className="tab-content-wrapper">
+              {tabContent[activeTab]}
             </div>
           </div>
         </div>
-        <div className="row mt-5 pt-4">
-          <div className="col-md-4">
-            <div className="qtec-progress">
-              <header>
-                <img src="/images/lauch.svg" alt="progress icon" />
-                <h4 className="qtec-h4"><span className="numCounter">97</span>%</h4>
-              </header>
-              <div className="progressBar overflow-hidden position-relative">
-                <div className="inner"><span className="numCounter"></span>%</div>
-                <div className="qtecMask"></div>
+
+        {/* Compact Stats Section */}
+        <div className="row mt-5 pt-4 gy-4 gx-3">
+          <div className="col-lg-4 col-md-6 col-sm-12">
+            <div className="about-stat-card text-center">
+              <div className="about-stat-row d-flex align-items-center justify-content-center mb-2">
+                <img src="/images/lauch.svg" alt="progress icon" className="about-stat-icon me-2" />
+                <h4 className="about-stat-number mb-0">20<span className="about-stat-plus">+</span></h4>
               </div>
-              <p className="qtec-desc textDark w-75">
-                Successful Projects Lorem psum dolor amet.
-              </p>
+              <div className="about-stat-label">Years of combined experience building computers</div>
             </div>
           </div>
-          <div className="col-md-4">
-            <div className="qtec-progress">
-              <header>
-                <img src="/images/innovation.svg" alt="progress icon" />
-                <h4 className="qtec-h4"><span className="numCounter">100</span>%</h4>
-              </header>
-              <div className="progressBar position-relative overflow-hidden">
-                <div className="inner"><span className="numCounter"></span>%</div>
-                <div className="qtecMask"></div>
+          <div className="col-lg-4 col-md-6 col-sm-12">
+            <div className="about-stat-card text-center">
+              <div className="about-stat-row d-flex align-items-center justify-content-center mb-2">
+                <img src="/images/innovation.svg" alt="progress icon" className="about-stat-icon me-2" />
+                <h4 className="about-stat-number mb-0">100<span className="about-stat-percent">%</span></h4>
               </div>
-              <p className="qtec-desc textDark w-75">
-                Successful Projects Lorem psum dolor amet.
-              </p>
+              <div className="about-stat-label">Quality tested systems with rigorous standards</div>
             </div>
           </div>
-          <div className="col-md-4">
-            <div className="qtec-progress">
-              <header>
-                <img src="/images/production.svg" alt="progress icon" />
-                <h4 className="qtec-h4"><span className="numCounter">80</span>%</h4>
-              </header>
-              <div className="progressBar position-relative overflow-hidden">
-                <div className="inner"><span className="numCounter"></span>%</div>
-                <div className="qtecMask"></div>
+          <div className="col-lg-4 col-md-6 col-sm-12">
+            <div className="about-stat-card text-center">
+              <div className="about-stat-row d-flex align-items-center justify-content-center mb-2">
+                <img src="/images/production.svg" alt="progress icon" className="about-stat-icon me-2" />
+                <h4 className="about-stat-number mb-0">0</h4>
               </div>
-              <p className="qtec-desc textDark w-75">
-                Successful Projects Lorem psum dolor amet.
-              </p>
+              <div className="about-stat-label">Compromises on performance or design</div>
             </div>
           </div>
         </div>

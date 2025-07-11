@@ -188,6 +188,23 @@
     padding-right: 5px;
   }
   
+  /* About section layout improvements */
+  .about-image-container {
+    margin-bottom: 20px;
+  }
+  
+  .about-content-wrapper {
+    padding: 0;
+  }
+  
+  .tab-navigation {
+    margin-bottom: 1.5rem;
+  }
+  
+  .tab-content-wrapper {
+    min-height: 200px;
+  }
+  
   /* Footer responsive styles */
   .copyright {
     font-size: 13px;

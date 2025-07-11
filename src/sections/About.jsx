@@ -43,43 +43,51 @@ function About() {
   }
 
   return (
-    <section className="qtec-about qtec-sectionMargin">
+    <section className="qtec-about qtec-sectionMargin" id="about">
       <div className="container">
-        {/* About Us - Image and Tabs Side by Side */}
-        <div className="row align-items-stretch mb-5 g-4">
-          <div className="col-lg-6 col-md-12 position-relative overflow-hidden d-flex align-items-stretch">
-            <div className="about-image-wrapper w-100 h-100">
-              <img
-                src="/images/aboutSide.jpg"
-                alt="About Obelixis"
-                className="animateImg rounded-4 w-100 h-100 object-fit-cover"
-                style={{ minHeight: '320px', objectFit: 'cover' }}
-              />
-              <div className="rounded-4 qtecMask"></div>
-            </div>
-          </div>
-          <div className="col-lg-6 col-md-12 d-flex flex-column justify-content-center">
-            <div className="qtec-tag mb-3">
-              About us
-            </div>
-            {/* Tab Navigation */}
-            <div className="tab-navigation mb-4">
-              <div className="row g-2">
-                {tabs.map((tab) => (
-                  <div key={tab.id} className="col-12 col-sm-4">
-                    <button
-                      className={`tab-button ${tab.active ? 'active' : ''}`}
-                      onClick={() => setActiveTab(tab.id)}
-                    >
-                      {tab.label}
-                    </button>
-                  </div>
-                ))}
+        {/* About Us - Image and Tabs Side by Side with Proper Spacing */}
+        <div className="row align-items-stretch mb-5 g-5">
+          {/* Left Column - Image (50%) */}
+          <div className="col-lg-6 col-md-12">
+            <div className="about-image-container">
+              <div className="about-image-wrapper">
+                <img
+                  src="/images/aboutSide.jpg"
+                  alt="About Obelixis"
+                  className="animateImg rounded-4 w-100 h-100 object-fit-cover"
+                />
+                <div className="rounded-4 qtecMask"></div>
               </div>
             </div>
-            {/* Tab Content */}
-            <div className="tab-content-wrapper">
-              {tabContent[activeTab]}
+          </div>
+          
+          {/* Right Column - Content (50%) */}
+          <div className="col-lg-6 col-md-12">
+            <div className="about-content-wrapper">
+              <div className="qtec-tag mb-4">
+                About us
+              </div>
+              
+              {/* Tab Navigation */}
+              <div className="tab-navigation mb-4">
+                <div className="row g-3">
+                  {tabs.map((tab) => (
+                    <div key={tab.id} className="col-12 col-sm-4">
+                      <button
+                        className={`tab-button ${tab.active ? 'active' : ''}`}
+                        onClick={() => setActiveTab(tab.id)}
+                      >
+                        {tab.label}
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              
+              {/* Tab Content */}
+              <div className="tab-content-wrapper">
+                {tabContent[activeTab]}
+              </div>
             </div>
           </div>
         </div>

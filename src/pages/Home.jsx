@@ -8,7 +8,6 @@ import SideNav from '../sections/SideNav'
 import Hero from '../sections/Hero'
 import About from '../sections/About'
 import Goals from '../sections/Goals'
-import Skills from '../sections/Skills'
 import Portfolio from '../sections/Portfolio'
 import Pricing from '../sections/Pricing'
 import Blog from '../sections/Blog'
@@ -16,6 +15,7 @@ import Social from '../sections/Social'
 import ContactForm from '../sections/ContactForm'
 import Footer from '../sections/Footer'
 import CustomCursor from '../sections/CustomCursor'
+import Product from '../sections/Skills'
 
 function Home() {
   const [loading, setLoading] = useState(true)
@@ -136,9 +136,9 @@ function Home() {
           <Navbar />
           <SideNav />
           <Hero />
-       {/* <Goals /> */}
-          <About />
-          <Skills />
+     <About />
+     <Goals />
+          <Product />
           
           {/* <Portfolio /> */}
           {/* <Pricing /> */}

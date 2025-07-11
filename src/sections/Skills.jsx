@@ -1,109 +1,94 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Autoplay } from 'swiper/modules'
+import { Navigation, Autoplay } from 'swiper/modules'
 import 'swiper/css'
+import 'swiper/css/navigation'
 
-const skills = [
-  { img: '/images/skills/ts.png', name: 'TypeScript' },
-  { img: '/images/skills/sw.png', name: 'Swift' },
-  { img: '/images/skills/cS.png', name: 'C#' },
-  { img: '/images/skills/ts.png', name: 'TypeScript' },
-  { img: '/images/skills/css.png', name: 'CSS' },
-  { img: '/images/skills/js.png', name: 'Javascript' },
-  { img: '/images/skills/py.png', name: 'Python' },
+const products = [
+  {
+    img: '/images/hero1.png',
+    title: 'Obelixis Creator Pro',
+    desc: 'A powerhouse for creators and professionals. High-performance, silent operation, and stunning design.'
+  },
+  {
+    img: '/images/hero2.png',
+    title: 'Obelixis Gaming Elite',
+    desc: 'Engineered for gamers who demand the best. Lightning-fast graphics and advanced cooling.'
+  },
+  {
+    img: '/images/hero3.png',
+    title: 'Obelixis Studio Mini',
+    desc: 'Compact, quiet, and powerful. Perfect for home offices and creative workspaces.'
+  },
+  {
+    img: '/images/hero4.png',
+    title: 'Obelixis Vision X',
+    desc: 'A showpiece PC with customizable RGB and top-tier specs for performance and style.'
+  },
+  {
+    img: '/images/hero1.png',
+    title: 'Obelixis Workstation Max',
+    desc: 'Ultimate reliability and expandability for professionals and innovators.'
+  },
 ]
 
-function Skills() {
-  const skillSliderSettings = {
-    slidesPerView: 6,
-    spaceBetween: 20,
+function Product() {
+  const productSliderSettings = {
+    slidesPerView: 3,
+    spaceBetween: 30,
     loop: true,
-    speed: 3000,
-    allowTouchMove: false,
-    autoplay: {
-      delay: 0,
-    },
+    navigation: true,
     breakpoints: {
       1200: {
-        slidesPerView: 5,
-        spaceBetween: 25,
+        slidesPerView: 3,
+        spaceBetween: 30,
       },
       992: {
-        slidesPerView: 3,
+        slidesPerView: 2,
         spaceBetween: 20,
       },
       768: {
-        slidesPerView: 2.5,
+        slidesPerView: 1.5,
         spaceBetween: 15,
       },
       576: {
-        slidesPerView: 2,
-        spaceBetween: 10,
-      },
-      320: {
-        slidesPerView: 1.5,
+        slidesPerView: 1,
         spaceBetween: 10,
       },
     },
-    modules: [Autoplay]
+    modules: [Navigation]
   }
+
   return (
-    <section className="qtec-skills qtec-sectionPadding">
+    <section className="qtec-skills qtec-sectionPadding" id="products">
       <div className="container">
         <div className="qtec-tag flex-column">
-          <img src="/images/tagIconDark.png" alt="Tag" />
-          Welcome Creative Agency
+          
+          Product Range
         </div>
         <h1 className="text-anim qtec-h1 textDark text-center text-uppercase my-3">
-          Trusted Digital Agency.
+          Explore Our Featured Systems
         </h1>
         <p className="qtec-desc textGrey text-center lh-lg mt-4">
-          On the other hand, We denounce with righteous indignation<br />
-          And Dislike men who are beguiled and demoralized
+          Discover our range of high-performance, design-led PCs crafted for creators, gamers, and professionals.<br />
+          Each system is built with precision, personality, and pride.
         </p>
-        <div className="row mt-4">
-          <div className="col-md-4 mob-lg-50 overflow-hidden position-relative">
-            <img
-              className="w-100 rounded-4 animateImg"
-              src="/images/skills/1.jpg"
-              alt="Skills Image"
-            />
-            <div className="rounded-4 qtecMask"></div>
-          </div>
-          <div className="col-md-4 mob-lg-50 position-relative overflow-hidden">
-            <img
-              className="animateImg w-100 rounded-4"
-              src="/images/skills/2.jpg"
-              alt="Skills Image"
-            />
-            <div className="rounded-4 qtecMask"></div>
-          </div>
-          <div className="col-md-4 mob-lg-50 overflow-hidden position-relative">
-            <img
-              className="w-100 animateImg rounded-4"
-              src="/images/skills/3.jpg"
-              alt="Skills Image"
-            />
-            <div className="rounded-4 qtecMask"></div>
-          </div>
+        <div className="productSlider mt-5">
+          <Swiper {...productSliderSettings}>
+            {products.map((product, idx) => (
+              <SwiperSlide key={idx}>
+                <div className="productCard p-4 rounded-4 text-center h-100 d-flex flex-column align-items-center justify-content-between" style={{background:'#f7f8fa', boxShadow:'0 2px 12px rgba(60,60,60,0.07)'}}>
+                  <img src={product.img} alt={product.title} className="mb-3 rounded-3 animateImg" style={{width:'100%',maxWidth:'100%',objectFit:'cover'}} />
+                  <h5 className="text-black fw-bold mb-2">{product.title}</h5>
+                  <p className="text-muted mb-0" style={{fontSize:'1em'}}>{product.desc}</p>
+                  <button className="qtec-btn">Add Product</button>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
-      <div className="skilSlider">
-        <Swiper {...skillSliderSettings}>
-          {skills.map((skill, index) => (
-            <SwiperSlide key={index}>
-              <div className="skillSingle">
-                <img src={skill.img} alt="Skill" />
-                <p>{skill.name}</p>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-      <p className="skillContact">
-        Want to see our Recent News & Updates. <a href="#">Contact us Now</a>
-      </p>
     </section>
   )
 }
 
-export default Skills 
+export default Product; 

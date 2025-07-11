@@ -1,4 +1,14 @@
 function Navbar() {
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      })
+    }
+  }
+
   return (
     <nav className="qtec-nav">
       <div className="logo">
@@ -6,10 +16,10 @@ function Navbar() {
       </div>
       <div className="d-flex qtec-gap justify-content-end align-items-center">
         <ul className="list-unstyled m-0 qtec-navLinks mob-lg-none">
-          <li><a href="#">Home</a> <span></span></li>
-          <li><a href="#">About</a><span></span></li>
-          <li><a href="#">Products</a><span></span></li>
-          <li><a href="#">Contact us</a><span></span></li>
+          {/* <li><a href="#">Home</a> <span></span></li> */}
+          <li><a href="#about" onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}>About</a><span></span></li>
+          <li><a href="#products" onClick={(e) => { e.preventDefault(); scrollToSection('products'); }}>Products</a><span></span></li>
+          <li><a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>Contact us</a><span></span></li>
         </ul>
         {/* <div className="searchIcon">
           <i className="fa-solid fa-magnifying-glass"></i>

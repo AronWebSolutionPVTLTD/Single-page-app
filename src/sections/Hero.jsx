@@ -31,7 +31,7 @@ function Hero() {
             </div>
           </div>
           {/* Restore the image slider below the hero content */}
-          <div className="heroSlider">
+          {/* <div className="heroSlider">
             <Swiper {...heroSliderSettings}>
               <SwiperSlide>
                 <img alt="Slider Image" src="/images/hero1.png" />
@@ -72,7 +72,7 @@ function Hero() {
                 </span>
               </SwiperSlide>
             </Swiper>
-          </div>
+          </div> */}
         </div>
       </header>
     </>

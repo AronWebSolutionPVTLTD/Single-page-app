@@ -134,10 +134,10 @@ function runMainScript() {
   gsap.registerPlugin(ScrollTrigger, SplitText);
 
   document.querySelectorAll(".text-anim").forEach((element) => {
-    const split = new SplitText(element, { type: "chars" });
-    const chars = split.chars;
-
-    gsap.from(chars, {
+    const split = new SplitText(element, { type: "words" }); // changed to "words"
+    const words = split.words;
+  
+    gsap.from(words, {
       scrollTrigger: {
         trigger: element,
         start: "10% 50%",
@@ -145,8 +145,8 @@ function runMainScript() {
       },
       opacity: 0,
       y: 10,
-      stagger: 0.03,
-      duration: 0.2,
+      stagger: 0.1, // slightly longer stagger for words
+      duration: 0.4,
       ease: "power2.out",
     });
   });

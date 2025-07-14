@@ -43,88 +43,86 @@ function About() {
   }
 
   return (
-    <section className="qtec-about qtec-sectionMargin" id="about">
-      <div className="container">
-        {/* About Us - Image and Tabs Side by Side with Proper Spacing */}
-        <div className="row align-items-stretch mb-5 g-5">
-          {/* Left Column - Image (50%) */}
-          <div className="col-lg-6 col-md-12">
-            <div className="about-image-container">
-              <div className="about-image-wrapper">
-                <img
-                  src="/images/aboutSide.jpg"
-                  alt="About Obelixis"
-                  className="animateImg rounded-4 w-100 h-100 object-fit-cover"
-                />
-                <div className="rounded-4 qtecMask"></div>
-              </div>
+  
+        <section className="qtec-about qtec-sectionMargin" id="about">
+          <div className="container">
+            {/* About Us Tag */}
+            <div className="qtec-tag mb-4 text-center">
+              About us
             </div>
-          </div>
-          
-          {/* Right Column - Content (50%) */}
-          <div className="col-lg-6 col-md-12">
-            <div className="about-content-wrapper">
-              <div className="qtec-tag mb-4">
-                About us
-              </div>
-              
-              {/* Tab Navigation */}
-              <div className="tab-navigation mb-4">
-                <div className="row g-3">
-                  {tabs.map((tab) => (
-                    <div key={tab.id} className="col-12 col-sm-4">
-                      <button
-                        className={`tab-button ${tab.active ? 'active' : ''}`}
-                        onClick={() => setActiveTab(tab.id)}
-                      >
-                        {tab.label}
-                      </button>
+            
+            {/* About Us - Stats and Tabs Side by Side with Proper Spacing */}
+            <div className="row align-items-start mb-5 g-5">
+              {/* Left Column - Stats Section (50%) */}
+              <div className="col-lg-6 col-md-12">
+                <div className="stats-section-wrapper h-100 d-flex flex-column justify-content-center">
+                  {/* Stats arranged in single column */}
+                  <div className="stats-container">
+                    <div className="row g-4">
+                      <div className="col-12">
+                        <div className="about-stat-card">
+                          <div className="about-stat-row">
+                            <img src="/images/lauch.svg" alt="progress icon" className="about-stat-icon" />
+                            <h4 className="about-stat-number">20<span className="about-stat-plus">+</span></h4>
+                          </div>
+                          <div className="about-stat-label">Years of combined experience building computers</div>
+                        </div>
+                      </div>
+                      
+                      <div className="col-12">
+                        <div className="about-stat-card">
+                          <div className="about-stat-row">
+                            <img src="/images/innovation.svg" alt="progress icon" className="about-stat-icon" />
+                            <h4 className="about-stat-number">100<span className="about-stat-percent">%</span></h4>
+                          </div>
+                          <div className="about-stat-label">Quality tested systems with rigorous standards</div>
+                        </div>
+                      </div>
+                      
+                      <div className="col-12">
+                        <div className="about-stat-card">
+                          <div className="about-stat-row">
+                            <img src="/images/production.svg" alt="progress icon" className="about-stat-icon" />
+                            <h4 className="about-stat-number">0</h4>
+                          </div>
+                          <div className="about-stat-label">Compromises on performance or design</div>
+                        </div>
+                      </div>
                     </div>
-                  ))}
+                  </div>
                 </div>
               </div>
               
-              {/* Tab Content */}
-              <div className="tab-content-wrapper">
-                {tabContent[activeTab]}
+              {/* Right Column - Content (50%) */}
+              <div className="col-lg-6 col-md-12">
+                <div className="about-content-wrapper h-100 d-flex flex-column justify-content-center">
+                  {/* Tab Navigation */}
+                  <div className="tab-navigation mb-4">
+                    <div className="row g-3">
+                      {tabs.map((tab) => (
+                        <div key={tab.id} className="col-12 col-sm-4">
+                          <button
+                            className={`tab-button ${tab.active ? 'active' : ''}`}
+                            onClick={() => setActiveTab(tab.id)}
+                          >
+                            {tab.label}
+                          </button>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  {/* Tab Content */}
+                  <div className="tab-content-wrapper">
+                    {tabContent[activeTab]}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </section>
+      )
+    }
 
-        {/* Compact Stats Section */}
-        <div className="row mt-5 pt-4 gy-4 gx-3">
-          <div className="col-lg-4 col-md-6 col-sm-12">
-            <div className="about-stat-card text-center">
-              <div className="about-stat-row d-flex align-items-center justify-content-center mb-2">
-                <img src="/images/lauch.svg" alt="progress icon" className="about-stat-icon me-2" />
-                <h4 className="about-stat-number mb-0">20<span className="about-stat-plus">+</span></h4>
-              </div>
-              <div className="about-stat-label">Years of combined experience building computers</div>
-            </div>
-          </div>
-          <div className="col-lg-4 col-md-6 col-sm-12">
-            <div className="about-stat-card text-center">
-              <div className="about-stat-row d-flex align-items-center justify-content-center mb-2">
-                <img src="/images/innovation.svg" alt="progress icon" className="about-stat-icon me-2" />
-                <h4 className="about-stat-number mb-0">100<span className="about-stat-percent">%</span></h4>
-              </div>
-              <div className="about-stat-label">Quality tested systems with rigorous standards</div>
-            </div>
-          </div>
-          <div className="col-lg-4 col-md-6 col-sm-12">
-            <div className="about-stat-card text-center">
-              <div className="about-stat-row d-flex align-items-center justify-content-center mb-2">
-                <img src="/images/production.svg" alt="progress icon" className="about-stat-icon me-2" />
-                <h4 className="about-stat-number mb-0">0</h4>
-              </div>
-              <div className="about-stat-label">Compromises on performance or design</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
 
 export default About 

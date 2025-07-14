@@ -218,7 +218,7 @@ h1, h2, h3, h4, h5, h6, .qtec-h1, .qtec-h2, .qtec-h3, .qtec-h4, .qtec-h5, .qtec-
   left: 0;
   width: 100%;
   height: 100%;
-  background: #000000a3; /* Increased opacity for more contrast */
+  background: #00000063; /* Increased opacity for more contrast */
   z-index: 2;
 }
 .heroContent {
@@ -315,9 +315,10 @@ h1, h2, h3, h4, h5, h6, .qtec-h1, .qtec-h2, .qtec-h3, .qtec-h4, .qtec-h5, .qtec-
     object-fit: cover;
     border-radius: 18px;
   }
+
 }
 .hero-bg-video, .hero-overlay {
-  min-height: 320px;
+  min-height: 100%;
 }
 .cont-desc{
   color: var(--text-color-dark);

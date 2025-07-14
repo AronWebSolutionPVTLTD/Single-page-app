@@ -7,7 +7,7 @@ import Navbar from '../sections/Navbar'
 import SideNav from '../sections/SideNav'
 import Hero from '../sections/Hero'
 import About from '../sections/About'
-import Goals from '../sections/Goals'
+import Products from '../sections/Products'
 import Portfolio from '../sections/Portfolio'
 import Pricing from '../sections/Pricing'
 import Blog from '../sections/Blog'
@@ -15,7 +15,7 @@ import Social from '../sections/Social'
 import ContactForm from '../sections/ContactForm'
 import Footer from '../sections/Footer'
 import CustomCursor from '../sections/CustomCursor'
-import Product from '../sections/Skills'
+import Product from '../sections/Product'
 
 function Home() {
   const [loading, setLoading] = useState(true)
@@ -62,22 +62,23 @@ function Home() {
       }
       document.addEventListener('mousemove', handleMouseMove)
       // GSAP text, mask, and image animations
-      document.querySelectorAll('.text-anim').forEach((element) => {
-        const split = new SplitText(element, { type: 'chars' })
-        const chars = split.chars
-        gsap.from(chars, {
+      document.querySelectorAll(".text-anim").forEach((element) => {
+        const split = new SplitText(element, { type: "words" }); // changed to "words"
+        const words = split.words;
+      
+        gsap.from(words, {
           scrollTrigger: {
             trigger: element,
-            start: '10% 50%',
-            toggleActions: 'play none none none',
+            start: "10% 50%",
+            toggleActions: "play none none none",
           },
           opacity: 0,
           y: 10,
-          stagger: 0.03,
-          duration: 0.2,
-          ease: 'power2.out',
-        })
-      })
+          stagger: 0.1, // slightly longer stagger for words
+          duration: 0.4,
+          ease: "power2.out",
+        });
+      });
       document.querySelectorAll('.qtecMask').forEach((el) => {
         gsap.to(el, {
           x: '100%',
@@ -137,9 +138,8 @@ function Home() {
           <SideNav />
           <Hero />
      <About />
-     <Goals />
-          <Product />
-          
+     <Products/>
+          {/* <Product /> */}
           {/* <Portfolio /> */}
           {/* <Pricing /> */}
           {/* <Blog /> */}

@@ -291,7 +291,8 @@
 
 .qtec-progress .qtec-desc {
   font-weight: bold;
-  font-family: "Poppins";
+  /* font-family: "Poppins"; */
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   margin-top: 16px;
 }
 .qtec-goals {
@@ -321,7 +322,8 @@
 .histoSingle {
   font-size: 20px;
   font-weight: bold;
-  font-family: "Poppins";
+  /* font-family: "Poppins"; */
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   text-align: center;
   line-height: 1;
   padding-top: 25px;
@@ -420,7 +422,8 @@
   font-size: 1.6em;
   font-weight: 900;
   color: var(--text-color-dark);
-  font-family: "Poppins";
+  /* font-family: "Poppins"; */
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   margin: 0;
 }
 .skilSlider .swiper-wrapper {
@@ -428,7 +431,8 @@
 }
 .skillContact {
   font-size: 1.25em;
-  font-family: "Poppins";
+  /* font-family: "Poppins"; */
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   font-weight: 600;
   color: var(--text-color-dark);
   text-align: center;
@@ -550,7 +554,8 @@
 }
 .pricingList li {
   font-size: 16px;
-  font-family: "Poppins";
+  /* font-family: "Poppins"; */
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   color: rgb(0, 0, 0);
   font-weight: bold;
   margin-bottom: 10px;
@@ -966,7 +971,8 @@
 }
 .footerLinks li a {
   font-size: 16px;
-  font-family: "Poppins";
+  /* font-family: "Poppins"; */
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   font-weight: normal;
   color: #fff;
   text-decoration: none;

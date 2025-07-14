@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 .qtech-body {
   --primary-color: #3A3441;        /* Deep purple-gray */
   --secondary-color: #f8f8f8;      /* Medium grayish purple */
@@ -10,7 +10,9 @@
   --box-bg: #4A4455;               /* Slightly lighter for boxes */
   --transition: 0.5s linear;
   --transitionFast: 0.5s ease-in-out;
-  font-family: "Poppins";
+  /* font-family: "Poppins"; */
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
   font-size: 16px;
   position: relative;
 }
@@ -50,7 +52,8 @@ h6 {
 }
 .qtec-desc {
   font-size: 1em;
-  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  /* font-family: 'Poppins', Arial, Helvetica, sans-serif; */
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   line-height: 1.5;
 
   
@@ -137,7 +140,8 @@ h6 {
 
 .pricingList li {
   font-size: 16px;
-  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  /* font-family: 'Poppins', Arial, Helvetica, sans-serif; */
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   color: rgb(0, 0, 0);
   font-weight: bold;
   margin-bottom: 10px;
@@ -323,7 +327,8 @@ h1, h2, h3, h4, h5, h6, .qtec-h1, .qtec-h2, .qtec-h3, .qtec-h4, .qtec-h5, .qtec-
 .cont-desc{
   color: var(--text-color-dark);
   font-size: 1.1875em;
-  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  /* font-family: 'Poppins', Arial, Helvetica, sans-serif; */
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   line-height: 1.5;
 }
 .product-img-wrapper {

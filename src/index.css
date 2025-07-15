@@ -26,3 +26,9 @@ h1, h2, h3, h4, h5, h6,
   width: auto;    /* Maintains aspect ratio */
   display: block; /* Removes extra space below image */
 }
+
+@media (max-width: 480px) {
+ .navbar-logo {
+      height: 35px;
+  }
+  }

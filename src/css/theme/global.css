@@ -260,20 +260,20 @@ h1, h2, h3, h4, h5, h6, .qtec-h1, .qtec-h2, .qtec-h3, .qtec-h4, .qtec-h5, .qtec-
 /* Responsive Hero Section */
 @media (max-width: 1200px) {
   .qtec-h1, .heroContent h1 {
-    font-size: 2em;
+    /* font-size: 2em; */
   }
   .hero-bio {
-    font-size: 0.95em;
+    /* font-size: 0.95em; */
     max-width: 90vw;
   }
 }
 @media (max-width: 900px) {
   .qtec-h1, .heroContent h1 {
-    font-size: 1.4em;
+    /* font-size: 1.4em; */
     line-height: 1.18;
   }
   .hero-bio {
-    font-size: 0.9em;
+    /* font-size: 0.9em; */
     max-width: 98vw;
     padding: 0 10px;
   }
@@ -284,14 +284,14 @@ h1, h2, h3, h4, h5, h6, .qtec-h1, .qtec-h2, .qtec-h3, .qtec-h4, .qtec-h5, .qtec-
 }
 @media (max-width: 600px) {
   .qtec-h1, .heroContent h1 {
-    font-size: 1em;
+    /* font-size: 1em; */
     line-height: 1.13;
     padding: 0 6px;
     margin-top: 24px;
     margin-bottom: 18px;
   }
   .hero-bio {
-    font-size: 0.85em;
+    font-size: 16px;
     margin-top: 18px;
     padding: 0 6px;
   }
@@ -303,7 +303,7 @@ h1, h2, h3, h4, h5, h6, .qtec-h1, .qtec-h2, .qtec-h3, .qtec-h4, .qtec-h5, .qtec-
     margin-bottom: 32px; /* More space below hero section */
   }
   .logo {
-    margin-bottom: 18px;
+    margin-bottom: 0;
   }
   .heroSlider {
     display: none;
@@ -336,3 +336,4 @@ h1, h2, h3, h4, h5, h6, .qtec-h1, .qtec-h2, .qtec-h3, .qtec-h4, .qtec-h5, .qtec-
   border-radius: 12px;
   margin-bottom: 20px;
 }
+

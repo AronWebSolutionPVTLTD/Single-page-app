@@ -2,8 +2,7 @@
   max-width: 1710px;
   width: 100%;
   margin: 0 auto;
-  padding: 50px;
-  min-height: 130px;
+  padding: 30px 25px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1395,7 +1394,7 @@
   }
   
   .qtec-desc {
-    font-size: 0.95em;
+    /* font-size: 0.95em; */
     line-height: 1.6;
   }
 }
@@ -1413,12 +1412,12 @@
   }
   
   .qtec-desc {
-    font-size: 0.9em;
+    /* font-size: 0.9em; */
     line-height: 1.5;
   }
   
   .qtec-tag {
-    font-size: 0.9em;
+    font-size: 20px;
     padding: 8px 20px;
   }
 }
@@ -1429,13 +1428,7 @@
     min-height: 100px;
     padding: 12px 6px 10px 6px;
   }
-  .about-stat-icon {
-    width: 28px;
-    height: 28px;
-  }
-  .about-stat-number {
-    font-size: 1.3em;
-  }
+
 }
 
 @media (max-width: 768px) {
@@ -1444,16 +1437,7 @@
     padding: 15px 10px;
     margin-bottom: 15px;
   }
-  
-  .about-stat-icon {
-    width: 32px;
-    height: 32px;
-  }
-  
-  .about-stat-number {
-    font-size: 1.5em;
-  }
-  
+
   .about-stat-label {
     font-size: 0.95em;
     margin-top: 10px;
@@ -1466,16 +1450,7 @@
     padding: 12px 8px;
     margin-bottom: 12px;
   }
-  
-  .about-stat-icon {
-    width: 28px;
-    height: 28px;
-  }
-  
-  .about-stat-number {
-    font-size: 1.3em;
-  }
-  
+
   .about-stat-label {
     font-size: 0.92em;
     margin-top: 8px;
@@ -1488,16 +1463,7 @@
     padding: 10px 6px;
     margin-bottom: 10px;
   }
-  
-  .about-stat-icon {
-    width: 24px;
-    height: 24px;
-  }
-  
-  .about-stat-number {
-    font-size: 1.1em;
-  }
-  
+
   .about-stat-label {
     font-size: 0.85em;
     margin-top: 6px;
@@ -2174,3 +2140,12 @@
   .main-product-img { height: 120px !important; }
   .thumb-product-img { height: 40px !important; }
 }
+
+@media (max-width: 480px) {
+  .qtec-hero {
+    min-height: 80vh;
+  }
+
+  }
+
+

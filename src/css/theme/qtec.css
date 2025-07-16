@@ -112,8 +112,9 @@
   transition: var(--transitionFast);
 }
 .qtec-navLinks li a {
-  color: var(--text-color-dark);
+  color: #f5f5f5;
   text-decoration: none;
+  font-weight: 400;
 }
 .qtec-navLinks li span {
   position: absolute;
@@ -168,7 +169,7 @@
 .qtec-hero::after {
   content: "";
   width: 100%;
-  height: 70%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -206,13 +207,12 @@
 }
 .heroSlider {
   margin-top: 80px;
-  border: 1px solid #717171;
+  /* border: 1px solid #717171; */
   overflow: hidden;
   border-radius: 67px;
 }
 .heroSlider .swiper-slide {
   width: 100%;
-  min-height: 550px;
   position: relative;
   border-radius: 50px;
   overflow: hidden;
@@ -220,26 +220,16 @@
   align-items: start;
   justify-content: end;
   flex-direction: column;
-  padding: 50px;
-}
-.heroSlider .swiper-slide::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-image: url(../../../public/images/blurry.png);
-  z-index: 2;
+  height: 450px;
 }
 .heroSlider .swiper-slide img {
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: static;
   top: 0;
   left: 0;
   object-fit: cover;
+  object-position: center;
 }
 .qtec-email {
   display: flex;
@@ -296,8 +286,29 @@
 }
 .qtec-goals {
   background-color: black;
-  background-image: url(../../../public/images/pattern.png);
+  background-image: url(/public/images/featured-bg.jpg);
   background-size: cover;
+  background-position: center;
+  z-index: 1;
+  border-radius: 50px;
+  overflow: hidden;
+}
+.goals-title{
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  max-width: 300px;
+}
+.qtec-goals::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(301deg, #00366b96 64%, #1e90ff82 0%);
+  opacity: 0.4;
+  top: 0;
 }
 .progressHisto {
   width: 100%;
@@ -736,7 +747,7 @@
   height: 100%;
   background-color: transparent;
   border-radius: inherit;
-  font-size: 16px;
+  font-size: 12px;
   border: 0;
   color: rgb(159, 164, 175);
   text-transform: uppercase;
@@ -779,7 +790,7 @@
 .inputField input::placeholder,
 .inputField select::placeholder,
 .inputField textarea {
-  font-size: 16px;
+  font-size: 12px;
   color: rgb(159, 164, 175);
   text-transform: uppercase;
   font-weight: 400;
@@ -891,7 +902,7 @@
   .inputField input,
   .inputField select,
   .inputField textarea {
-    font-size: 13px;
+    font-size: 12px;
     padding: 0 18px;
   }
   
@@ -945,7 +956,7 @@
 .qtec-footer {
   width: 100%;
   height: auto;
-  background-color: var(--secondary-color);
+  background-color: #00366b;
 }
 .footerInner {
   max-width: 1620px;
@@ -1039,6 +1050,9 @@
 .copyright-content {
   padding: 0 20px;
   line-height: 1.6;
+  font-size: 12px;
+  font-weight: 400;
+  color: #fff;
 }
 
 .qtec-cursor {
@@ -1305,6 +1319,7 @@
   min-height: 120px;
   position: relative;
   transition: box-shadow 0.2s;
+  text-align: center;
 }
 .about-stat-card:hover {
   box-shadow: 0 8px 32px 0 rgba(58,66,81,0.18);
@@ -1322,10 +1337,10 @@
   margin-bottom: 0;
 }
 .about-stat-number {
-  font-size: 2em;
-  font-weight: 900;
+  font-size: 28px;
+  font-weight: 500;
   color: var(--primary-color);
-  margin-bottom: 0;
+  margin-bottom: 10px;
   letter-spacing: 1px;
 }
 .about-stat-plus, .about-stat-percent {
@@ -1335,7 +1350,7 @@
   margin-left: 2px;
 }
 .about-stat-label {
-  font-size: 1em;
+  font-size: 16px;
   color: var(--text-color-black);
   margin-top: 8px;
   font-weight: 500;
@@ -1377,9 +1392,14 @@
 }
 
 /* Tab Navigation Responsive */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .tab-navigation {
     margin-bottom: 2rem;
+  }
+  .about-stat-card{
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 25px 42px;
   }
   
   .tab-button {
@@ -1417,7 +1437,7 @@
   }
   
   .qtec-tag {
-    font-size: 20px;
+    font-size: 30px;
     padding: 8px 20px;
   }
 }
@@ -1426,20 +1446,17 @@
 @media (max-width: 900px) {
   .about-stat-card {
     min-height: 100px;
-    padding: 12px 6px 10px 6px;
   }
 
 }
 
 @media (max-width: 768px) {
   .about-stat-card {
-    min-height: 90px;
-    padding: 15px 10px;
     margin-bottom: 15px;
   }
 
   .about-stat-label {
-    font-size: 0.95em;
+    font-size: 14px;
     margin-top: 10px;
   }
 }
@@ -1447,27 +1464,11 @@
 @media (max-width: 600px) {
   .about-stat-card {
     min-height: 80px;
-    padding: 12px 8px;
     margin-bottom: 12px;
-  }
-
-  .about-stat-label {
-    font-size: 0.92em;
-    margin-top: 8px;
   }
 }
 
 @media (max-width: 480px) {
-  .about-stat-card {
-    min-height: 70px;
-    padding: 10px 6px;
-    margin-bottom: 10px;
-  }
-
-  .about-stat-label {
-    font-size: 0.85em;
-    margin-top: 6px;
-  }
   
   .about-stat-row {
     gap: 8px;
@@ -1585,7 +1586,7 @@
     font-size: 2em;
   }
   .cont-desc {
-    font-size: 1em;
+    font-size: 14px;
   }
   .inputField input,
   .inputField select,
@@ -1600,15 +1601,12 @@
 }
 @media (max-width: 576px) {
   .qtec-form .qtec-h2 {
-    font-size: 1.3em;
-  }
-  .cont-desc {
-    font-size: 0.95em;
+    font-size: 30px;
   }
   .inputField input,
   .inputField select,
   .inputField textarea {
-    font-size: 13px;
+    font-size: 12px;
   }
   .qtec-btn {
     font-size: 0.95em;
@@ -1879,7 +1877,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-size: 0.98em;
+  font-size: 14px;
   padding-right: 1.2rem;
   min-width: 120px;
 }
@@ -1901,7 +1899,6 @@
     top: 1.2rem;
   }
   .cell-label {
-    font-size: 0.93em;
     padding-right: 0.7rem;
   }
 }
@@ -1915,7 +1912,6 @@
     top: 1rem;
   }
   .cell-label {
-    font-size: 0.9em;
     padding-right: 0.5rem;
   }
 }
@@ -1987,9 +1983,11 @@
 }
 .minimal-table {
   background: none !important;
-  border: 1.5px solid #e0e0e0 !important;
+  border: 1.5px solid #e0e0e040 !important;
   border-radius: 14px !important;
   box-shadow: none !important;
+  background: #00000033 !important;
+  backdrop-filter: blur(6px);
 }
 .clean-img-wrapper {
   max-width: 900px;
@@ -2110,6 +2108,11 @@
   color: #fff !important;
   border-radius: 2em;
   box-shadow: 0 2px 8px rgba(30,144,255,0.10);
+  margin: 0;
+  /* background: #00366b !important; */
+  padding: 10px 30px;
+  border-radius: 42px;
+  font-size: 23px !important;
 }
 .qtec-btn.active,
 .qtec-btn:hover {
@@ -2118,27 +2121,16 @@
 }
 .featured-product-img-wrapper img {
   max-width: 100%;
-}
-@media (max-width: 1200px) {
-  .main-product-img { max-width: 100%; height: 320px !important; }
-  .thumb-product-img { max-width: 100%; height: 120px !important; }
-}
-@media (max-width: 991px) {
-  .main-product-img { max-width: 100%; height: 220px !important; }
-  .thumb-product-img { max-width: 100%; height: 80px !important; }
+  border: 1px solid #676767 !important;
 }
 @media (max-width: 767px) {
   .product-featured-clean h2 { font-size: 2em !important; }
   .product-table-card { font-size: 0.95em; }
   .featured-product-img-wrapper { margin-bottom: 1em; }
-  .main-product-img { height: 180px !important; }
-  .thumb-product-img { height: 60px !important; }
 }
 @media (max-width: 575px) {
-  .product-featured-clean h2 { font-size: 1.5em !important; }
-  .qtec-btn { font-size: 1em !important; padding: 0.5em 1.2em !important; }
-  .main-product-img { height: 120px !important; }
-  .thumb-product-img { height: 40px !important; }
+  .product-featured-clean h2 { font-size: 22px !important; }
+  .qtec-btn { font-size: 12px !important; padding: 0.5em 1.2em !important; }
 }
 
 @media (max-width: 480px) {
@@ -2148,4 +2140,122 @@
 
   }
 
+  @media ( max-width: 767px ){
+    .tab-button{
+      font-size: 12px;
+    }
+    .qtec-desc{
+      font-size: 14px;
+    }
+    .tab-content-wrapper{
+      padding-bottom: 0;
+    }
+    .buybtn {
+      font-size: 16px !important;
+      padding: 12px 20px !important;
+      width: 100% !important;
+      display: block !important;
+      margin: 0 auto !important;
+      height: auto;
+  }
+  .price-btn-custom {
+    font-size: 15px !important;
+}
+  }
+  .slider-heading {
+    color: #000;
+    text-align: center;
+    margin-bottom: 45px;
+    font-size: 37px;
+  }
+  @media ( max-width: 576px ){
+    .tab-button{
+      font-size: 12px !important;
+    }
+    .goals-title {
+      font-size: 30px;
+      text-align: center !important;
+      margin: 0 auto;
+  }
+  .slider-heading{
+    font-size: 30px;
+  }
+  .qtec-goals{
+    border-radius: 30px;
+  }
+  section.qtec-goals.qtec-sectionMargin {
+    padding: 40px 0;
+}
+  }
+
+  .prod_card.card h4 {
+    color: #000;
+}
+
+.prod_card.card {
+    border: 1px solid #ddd;
+}
+
+.prod_card.card .card-body {
+    background: #eee;
+}
+@media ( max-width: 767px ){
+  .heroSlider .swiper-slide{
+    height: auto;
+  }
+}
+
+.menu_bar {
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+@media ( max-width: 991px ){
+  .nav_menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+    z-index: 9999;
+    background: #000000c9;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+}
+  .nav_menu.open{
+    pointer-events: all;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .qtec-nav .qtec-gap {align-items: center !important;flex-direction: column;justify-content: center !important;gap: 30px;}
+
+.menu_close {
+    /* position: absolute; */
+    top: 25px;
+    z-index: 9999;
+    left: 50%;
+    /* transform: translateX(-50%); */
+}
+
+.qtec-nav .qtec-gap .qtec-navLinks {
+    display: grid;
+    gap: 20px;
+}
+
+.qtec-navLinks li::after {
+    display: none;
+}
+
+.qtec-navLinks li {
+    font-size: 18px;
+}
+}
+body.overflow-hidden{
+  height: 100%;
+  overflow: hidden;
+}
 

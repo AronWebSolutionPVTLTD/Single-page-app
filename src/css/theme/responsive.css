@@ -139,10 +139,6 @@
   .qtec-heroSocials {
     display: none;
   }
-  .qtec-nav .qtec-gap {
-    justify-content: space-between !important;
-    gap: 0;
-  }
   .qtec-menuIcon {
     margin-left: 20px;
   }

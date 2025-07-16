@@ -75,7 +75,7 @@ function Products() {
       <div className="container">
         <div className='row align-items-center'>
           <div className='col-12 col-lg-6 mb-4 '>
-            <h2 className=" text-start">Featured Product</h2>
+            <h2 className=" goals-title text-start">Featured Product</h2>
           </div>
           <div className='col-12 col-lg-6'>
           <div className="d-flex flex-wrap gap-2 justify-content-center mb-4">
@@ -105,7 +105,7 @@ function Products() {
         
         <div className="row align-items-start justify-content-center flex-lg-nowrap goals-gap-x">
           {/* Left: Product Images */}
-          <div className="col-lg-7 mb-2 d-flex flex-column align-items-center">
+          <div className="col-lg-7 mb-2 d-flex flex-column align-items-stretch">
             
             <div className="featured-product-img-wrapper clean-img-wrapper mb-3 main-img-bg p-0 w-100 d-flex align-items-center justify-content-center">
               <img
@@ -156,8 +156,8 @@ function Products() {
               </div>
             </div>
 
-            <div className="col-md-12 mt-5">
-                  <button className="w-100 qtec-btn m-0" type="submit">
+            <div className="col-md-12 mt-lg-5 mt-4">
+                  <button className="w-100 qtec-btn m-0 buybtn" type="submit">
                     <span>Buy Now</span>
                   </button>
                 </div>
@@ -168,9 +168,9 @@ function Products() {
               <div className="d-flex align-items-center justify-content-between mb-3 flex-wrap gap-2">
                 <div>
                   <span className="model-label minimal-label">MODEL</span>
-                  <h2 className="fw-bold text-light mb-1" style={{ fontSize: '2.5em', letterSpacing: '1px' }}>{product.name}</h2>
+                  <h2 className="product-titlefw-bold text-light mb-1">{product.name}</h2>
                 </div>
-                <button className="qtec-btn fs-2 fw-bold price-btn-custom">{product.price}</button>
+                <p className="fs-2 fw-bold price-btn-custom">{product.price}</p>
               </div>
               {/* Overview Table */}
               <div className="product-table-card minimal-table mb-4">
@@ -195,7 +195,7 @@ function Products() {
                 </div>
               </div>
               {/* Features Table */}
-              <div className="product-table-card minimal-table">
+              <div className="product-table-card minimal-table mb-0">
                 <div className="vertical-label minimal-label-vertical">FEATURES</div>
                 <div className="table-content">
                   <div className="row-table">

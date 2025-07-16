@@ -29,7 +29,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: bold !important;
+  font-weight: 400;
   line-height: 1.2 !important;
 }
 .qtec-h1 {
@@ -230,8 +230,9 @@ h1, h2, h3, h4, h5, h6, .qtec-h1, .qtec-h2, .qtec-h3, .qtec-h4, .qtec-h5, .qtec-
   z-index: 3;
 }
 
-.qtec-h1, .heroContent h1 {
-  text-shadow: 0 4px 24px rgba(0,0,0,0.35), 0 1px 2px rgba(0,0,0,0.25);
+.qtec-h1{
+  text-shadow: 0 4px 24px rgb(255 255 255 / 35%), 0 1px 2px rgb(255 255 255 / 25%);
+  filter: drop-shadow(0px 6px 1px #000000ab);
 }
 
 .hero-bio {
@@ -304,9 +305,6 @@ h1, h2, h3, h4, h5, h6, .qtec-h1, .qtec-h2, .qtec-h3, .qtec-h4, .qtec-h5, .qtec-
   }
   .logo {
     margin-bottom: 0;
-  }
-  .heroSlider {
-    display: none;
   }
   .heroSlider h5 {
     font-size: 1em;

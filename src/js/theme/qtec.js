@@ -140,7 +140,7 @@ function runMainScript() {
     gsap.from(words, {
       scrollTrigger: {
         trigger: element,
-        start: "10% 50%",
+        start: "50% 50%",
         toggleActions: "play none none none",
       },
       opacity: 0,

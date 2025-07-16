@@ -13,7 +13,9 @@ body {
 
 h1, h2, h3, h4, h5, h6,
 .qtec-h1, .qtec-h2, .qtec-h3, .qtec-h4, .qtec-h5, .qtec-h6 {
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-family: 'elevon', sans-serif;
+  font-style: normal;
+  font-weight: 400;
 }
 
 #root {

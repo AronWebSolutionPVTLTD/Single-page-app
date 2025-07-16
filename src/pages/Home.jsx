@@ -16,6 +16,8 @@ import ContactForm from '../sections/ContactForm'
 import Footer from '../sections/Footer'
 import CustomCursor from '../sections/CustomCursor'
 import Product from '../sections/Product'
+import ProductListing from '../sections/ProductListing'
+import Sliders from '../sections/Sliders'
 
 function Home() {
   const [loading, setLoading] = useState(true)
@@ -69,7 +71,7 @@ function Home() {
         gsap.from(words, {
           scrollTrigger: {
             trigger: element,
-            start: "10% 50%",
+            start: "0% 50%",
             toggleActions: "play none none none",
           },
           opacity: 0,
@@ -137,8 +139,11 @@ function Home() {
           <Navbar />
           <SideNav />
           <Hero />
-     <About />
+          <Sliders />
      <Products/>
+     
+     <About />
+     {/* <ProductListing /> */}
           {/* <Product /> */}
           {/* <Portfolio /> */}
           {/* <Pricing /> */}

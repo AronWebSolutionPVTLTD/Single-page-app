@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const products = [
   {
-    name: 'Apex 1',
+    name: 'Apex',
     price: '£4,995',
     images: ['/images/hero2.png', '/images/hero2.png', '/images/hero2.png'],
     overview: {
@@ -24,85 +24,119 @@ const products = [
     }
   },
   {
-    name: 'Apex 2',
-    price: '£3,995',
+    name: 'Titan',
+    price: '£3,495',
     images: ['/images/hero3.png', '/images/hero3.png', '/images/hero3.png'],
     overview: {
-      targetMarket: 'For creators and prosumers who need power and reliability.',
-      animalAnalogy: 'Wolf - smart, adaptable, and works well in a pack.',
-      tagline: 'Create without limits.',
-      description: 'Apex 2 is built for those who multitask, create, and demand reliability. Perfect for editing, streaming, and gaming.'
-    },
-    features: {
-      os: 'Windows 11 Home',
-      ram: '64GB 5200MHz DDR5 (2 x 32GB)',
-      storage: '1TB NVMe SSD / 2TB SATA HDD',
-      cpu: 'Intel i9 4.2GHz / 12 Core / 60MB Cache',
-      graphics: 'NVIDIA RTX4080 16GB / 4K Ready',
-      connectivity: [
-        '1GB LAN | Wifi 6 | Bluetooth 5.2',
-        '2 x USB-C 3.1 | 2 x USB 3.0 | 2 x USB 2.0'
-      ]
-    }
-  },
-  {
-    name: 'Apex 3',
-    price: '£2,495',
-    images: ['/images/hero4.png', '/images/hero4.png', '/images/hero4.png'],
-    overview: {
-      targetMarket: 'For everyday users and casual gamers.',
-      animalAnalogy: 'Fox - clever, quick, and resourceful.',
-      tagline: 'Smart performance.',
-      description: 'Apex 3 is the perfect balance of performance and value. Great for work, play, and everything in between.'
-    },
-    features: {
-      os: 'Windows 11 Home',
-      ram: '32GB 4800MHz DDR4 (2 x 16GB)',
-      storage: '512GB NVMe SSD',
-      cpu: 'Intel i7 3.8GHz / 8 Core / 30MB Cache',
-      graphics: 'NVIDIA RTX4060 8GB / FHD Ready',
-      // No connectivity field for this product
-    }
-  },
-  {
-    name: 'Apex 4',
-    price: '£4,995',
-    images: ['/images/hero2.png', '/images/hero2.png', '/images/hero2.png'],
-    overview: {
-      targetMarket: 'For hardcore gamers and streamers who demand absolute dominance, no matter the setting.',
-      animalAnalogy: 'Eagle - sharp, dominant, and rules from the top.',
-      tagline: 'Dominate everything.',
-      description: 'The Apex isn’t just a gaming PC – it’s your command centre, your war machine, your unfair advantage. Locked deep in a ranked grind, streaming to your fanbase or editing 8K footage – Apex doesn’t flinch.'
+      targetMarket: `For creators and producers who push pixels, layers, and timelines to the limit — and expect perfection.'`,
+      animalAnalogy: 'Bear - powerful, stable, and hard to stop.',
+      tagline: 'Don’t cut corners, only content',
+      description: `Titan is made for high-output, high state creative
+                  work. Rendering films, mastering audio, designing
+                  campaigns, and pushing 3d to the edge – Titan doesn’t
+                  just keep up, it sets the pace.`
     },
     features: {
       os: 'Windows 11 Pro',
-      ram: '128GB 5600MHz DDR5 (2 x 64GB)',
+      ram: '64GB 6000MHz DDR5 (2 x 32GB)',
       storage: '2TB NVMe SSD / 2TB SATA HDD',
-      cpu: 'AMD Ryzen 9 4.5GHz / 16 Core / 81MB Cache',
-      graphics: 'Asus ROG STRIX RTX4090 24GB / 8K Ready',
+      cpu: 'Intel Core i9 / 24 Core 36MB Cache',
+      graphics: 'Asus ProArt RTX4080 SUPER / 8K Ready',
       connectivity: [
-        '2.5GB LAN | Wifi 7 | Bluetooth 5.4',
-        '1 x USB-C 3.2 | 3 x USB 3.1 | 4 x USB 3.0 | 2 x USB 2.0'
+        '2.5GB LAN',
+        '1 x USB-C 3.1',
+        '1 x USB 3.2',
+        '4 x USB 3.2',
+        '4 x USB 2.0'
       ]
     }
   },
   {
-    name: 'Apex 5',
+    name: 'Stike',
     price: '£2,495',
     images: ['/images/hero4.png', '/images/hero4.png', '/images/hero4.png'],
     overview: {
-      targetMarket: 'For everyday users and casual gamers.',
-      animalAnalogy: 'Fox - clever, quick, and resourceful.',
-      tagline: 'Smart performance.',
-      description: 'Apex 3 is the perfect balance of performance and value. Great for work, play, and everything in between.'
+      targetMarket: 'For gamers ready to level up — blending competitive power with modern flexibility.',
+      animalAnalogy: 'Wolf - strategic, balanced, and dependable in a pack',
+      tagline: 'Strike faster. Stay sharp.',
+      description: `Built for gamers who want more – more FPS, more
+multitasking … more everything. From ranked matches
+to campaigned grinds, this is the rig that keeps pace
+with your skill.`
+    },
+    features: {
+      os: 'Windows 11 Pro',
+      ram: '32GB 3600MHz DDR (2 x 16GB)',
+      storage: '1TB NVMe SSD',
+      cpu: 'AMD Ryzen 7 3.0GHz / 8 Core / 100MB Cache',
+      graphics: 'ASUS Dual GeForce RTX™ 8GB / 8K Ready',
+      connectivity: [
+        '2.5GB LAN',
+        'WiFi 7',
+        'Bluetooth 5.4',
+        '1 x USB-C 3.2',
+        '3 x USB 3.1',
+        '4 x USB 3.0',
+        '2 x USB 2.0'
+      ]
+    }
+  },
+  {
+    name: 'Spark',
+    price: '£1,395',
+    images: ['/images/hero2.png', '/images/hero2.png', '/images/hero2.png'],
+    overview: {
+      targetMarket: `For professionals, students, and families who want
+sleek, silent power at home — without compromise.`,
+      animalAnalogy: 'Cheetah - compact, fast, and efficient',
+      tagline: 'Speed in Silence. Power at Home.',
+      description: `Effortless power, instant response, and precision where
+it matters. The Spark isn’t just built to perform — it’s
+crafted to impress. Quiet, sharp, and refined, it slips
+into your space like it was always meant to be there.`
     },
     features: {
       os: 'Windows 11 Home',
-      ram: '32GB 4800MHz DDR4 (2 x 16GB)',
-      storage: '512GB NVMe SSD',
-      cpu: 'Intel i7 3.8GHz / 8 Core / 30MB Cache',
-      graphics: 'NVIDIA RTX4060 8GB / FHD Ready',
-      // No connectivity field for this product
+      ram: '128GB 5600MHz DDR5 (2 x 64GB)',
+      storage: '1TB NVMe SSD',
+      cpu: 'AMD Ryzen 7 3.0GHz / 8 Core / 100MB Cache',
+      graphics: 'Nvidia RTX 3060 12GB / 8K Ready',
+      connectivity: [
+        'Gigabit LAN',
+        'WiFi',
+        '2 x USB 2.0',
+        '3 x USB 3.2',
+        '1 x USB-C 3.2'
+      ]
+    }
+  },
+  {
+    name: 'Canvas',
+    price: '£2,495',
+    images: ['/images/hero4.png', '/images/hero4.png', '/images/hero4.png'],
+    overview: {
+      targetMarket: `For designers and visual creatives who need fast,
+precise, and seamless performance across every tool.`,
+      animalAnalogy: `Fox - clever, creative, and precise`,
+      tagline: 'This is your Canvas',
+      description: `Whether you’re working in Adobe, Figma, Affinity or
+Blender – Canvas keeps everything sharp, responsive
+and stitched together. High-res files? Multi-monitor
+workflows? Realtime previews? No problem.`,
+    },
+    features: {
+      os: 'Windows 11 Pro',
+      ram: '64GB 3600MHz DDR4 (2 x 32GB)',
+      storage: '2TB NVMe SSD / 2TB SATA HDD',
+      cpu: 'Intel Core i7 / 2.1GHz / 16 Core / 30MB Cache',
+      graphics: 'Asus DUAL RTX4060 Ti 8MB / 8K Ready',
+      connectivity: [
+        '2.5GB LAN',
+        '1 x USB-C 3.1',
+        '1 x USB 3.2',
+        '4 x USB 3.2',
+        '4 x USB 2.0'
+      ]
     }
   }
 ];
@@ -261,7 +295,7 @@ function Products() {
                   </div>
                   <div className="row-table">
                     <div className="cell-label">CONNECTIVITY & PORTS</div>
-                    <div className="cell-value">
+                    <div className="cell-value connectivity-cell">
                       {product.features.connectivity ? (
                         product.features.connectivity.map((c, i) => <div key={i}>{c}</div>)
                       ) : (

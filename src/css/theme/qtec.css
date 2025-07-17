@@ -202,7 +202,7 @@
   background-color: var(--text-color-light);
 }
 .heroContent {
-  margin-top: 120px;
+  margin-top: calc( 120px + 108px );
   margin-bottom: 120px;
 }
 .heroSlider {
@@ -298,7 +298,6 @@
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 1px;
-  max-width: 300px;
 }
 .qtec-goals::before {
   content: '';
@@ -816,9 +815,20 @@
   box-shadow: none;
 }
 .qtec-form {
-  background-color: rgb(27, 27, 26);
-  background-image: url(../../../public/images/pattern3.png);
+  background-image: url(/public/images/dark-blue-bg.jpg);
   background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+.qtec-form::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(0 54 107 / 20%);
+  z-index: -1;
 }
 
 /* Contact Form Responsive Styles */
@@ -929,13 +939,13 @@
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(90deg, #4FC3F7 0%, #1976D2 100%);
+  background: #00366b;
   color: #fff;
   font-weight: 700;
   border: none;
   border-radius: 31px;
-  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.10);
   font-size: 1.15em;
+  border: 1px solid #155492;
 }
 
 .qtec-btn:hover {
@@ -957,6 +967,7 @@
   width: 100%;
   height: auto;
   background-color: #00366b;
+  border-top: 1px solid #fff;
 }
 .footerInner {
   max-width: 1620px;
@@ -1048,13 +1059,15 @@
 }
 
 .copyright-content {
-  padding: 0 20px;
+  padding: 10px 20px;
   line-height: 1.6;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 400;
   color: #fff;
 }
-
+.form-text{
+  font-size: 12px;
+}
 .qtec-cursor {
   width: 50px;
   height: 50px;
@@ -1971,7 +1984,7 @@
 }
 .minimal-label-vertical {
   background: none !important;
-  color: #4FC3F7 !important;
+  color: #fff !important;
   font-size: 1em !important;
   font-weight: 700;
   border-radius: 0;
@@ -2199,6 +2212,12 @@
 .prod_card.card .card-body {
     background: #eee;
 }
+button.qtec-btn.prod_tab_btn {
+  padding: 11px 22px !important;
+  font-size: 14px !important;
+  min-height: unset !important;
+  height: auto;
+}
 @media ( max-width: 767px ){
   .heroSlider .swiper-slide{
     height: auto;
@@ -2253,9 +2272,17 @@
 .qtec-navLinks li {
     font-size: 18px;
 }
+.qtec-cursor {
+  display: none;
+}
 }
 body.overflow-hidden{
   height: 100%;
   overflow: hidden;
 }
-
+@media ( max-width: 767px ){
+  .copyright-content{
+    font-size: 13px;
+    padding: 12px 0;
+  }
+}

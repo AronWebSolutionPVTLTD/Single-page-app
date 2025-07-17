@@ -110,9 +110,7 @@
     font-size: 14px;
     padding: 14px;
   }
-  .copyright-content {
-    padding: 0 18px;
-  }
+  
 }
 
 @media (max-width: 576px) {
@@ -206,9 +204,6 @@
     font-size: 13px;
     padding: 12px;
   }
-  .copyright-content {
-    padding: 0 15px;
-  }
 }
 
 @media (max-width: 320px) {
@@ -216,8 +211,5 @@
   .copyright {
     font-size: 12px;
     padding: 10px;
-  }
-  .copyright-content {
-    padding: 0 10px;
   }
 }

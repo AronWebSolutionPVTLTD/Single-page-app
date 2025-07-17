@@ -146,14 +146,14 @@ function Products() {
   const product = products[selected];
 
   return (
-    <section className="qtec-goals qtec-sectionMargin qtec-sectionPadding position-relative">
+    <section id='featured_section' className="qtec-goals qtec-sectionMargin qtec-sectionPadding position-relative">
       <div className="container">
         <div className='row align-items-center'>
           <div className='col-12 col-lg-6 mb-4 '>
             <h2 className=" goals-title text-start">Our Range</h2>
           </div>
           <div className='col-12 col-lg-6'>
-          <div className="d-flex flex-wrap gap-2 justify-content-center mb-4">
+          <div className="d-flex flex-wrap gap-2 justify-content-center justify-content-lg-start mb-4 ps-lg-5">
           {products.map((p, idx) => (
             <button
               key={p.name}
@@ -180,7 +180,7 @@ function Products() {
         
         <div className="row align-items-start justify-content-center flex-lg-nowrap goals-gap-x">
           {/* Left: Product Images */}
-          <div className="col-lg-7 mb-2 d-flex flex-column align-items-stretch">
+          <div className="col-lg-6 mb-2 d-flex flex-column align-items-stretch">
             
             <div className="featured-product-img-wrapper clean-img-wrapper mb-3 main-img-bg p-0 w-100 d-flex align-items-center justify-content-center">
               <img
@@ -238,8 +238,8 @@ function Products() {
                 </div>
           </div>
           {/* Right: Product Content */}
-          <div className="col-lg-5 mb-lg-0 d-flex flex-column justify-content-center mt-4 mt-lg-0">
-            <div className="product-featured-clean p-0 w-100">
+          <div className="col-lg-6 mb-lg-0 d-flex flex-column justify-content-center mt-4 mt-lg-0">
+            <div className="product-featured-clean p-0 w-100 ps-lg-5">
               <div className="d-flex align-items-center justify-content-between mb-3 flex-wrap gap-2">
                 <div>
                   <span className="model-label minimal-label">MODEL</span>
@@ -248,6 +248,7 @@ function Products() {
                 <p className="fs-2 fw-bold price-btn-custom">{product.price}</p>
               </div>
               {/* Overview Table */}
+              <div className='table__wrapper'>
               <div className="product-table-card minimal-table mb-4">
                 <div className="vertical-label minimal-label-vertical">OVERVIEW</div>
                 <div className="table-content">
@@ -304,6 +305,7 @@ function Products() {
                     </div>
                   </div>
                 </div>
+              </div>
               </div>
             </div>
           </div>

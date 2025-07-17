@@ -33,7 +33,7 @@ function Navbar() {
         <ul className="list-unstyled m-0 qtec-navLinks">
           {/* <li><a href="#">Home</a> <span></span></li> */}
           <li><a href="#about" onClick={(e) => { e.preventDefault(); setMenu(false); scrollToSection('about'); }}>About</a><span></span></li>
-          <li><a href="#products" onClick={(e) => { e.preventDefault();setMenu(false); scrollToSection('products'); }}>Products</a><span></span></li>
+          <li><a href="#featured_section" onClick={(e) => { e.preventDefault();setMenu(false); scrollToSection('featured_section'); }}>Products</a><span></span></li>
           <li><a href="#contact" onClick={(e) => { e.preventDefault();setMenu(false); scrollToSection('contact'); }}>Contact us</a><span></span></li>
         </ul>
         {/* <div className="searchIcon">

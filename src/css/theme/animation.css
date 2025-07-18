@@ -1,0 +1,72 @@
+.histoSingle {
+  --animation: 1s forwards linear;
+}
+.animate .fill {
+  animation: toTop var(--animation);
+}
+
+@keyframes toTop {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+
+.histo1.animate {
+  animation: toTop1 var(--animation);
+}
+
+@keyframes toTop1 {
+  from {
+    height: 0;
+  }
+  to {
+    height: 70%;
+  }
+}
+.histo2.animate {
+  animation: toTop2 var(--animation);
+}
+
+@keyframes toTop2 {
+  from {
+    height: 0;
+  }
+  to {
+    height: 85%;
+  }
+}
+
+.histo3.animate {
+  animation: toTop3 var(--animation);
+}
+
+@keyframes toTop3 {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+.done {
+  animation: loadingDone 1s linear forwards;
+}
+
+@keyframes loadingDone {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  95% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+  }
+}
